@@ -1,0 +1,12 @@
+Database setup syntax: 
+
+CREATE DATABASE [databasename] DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+GRANT ALL ON [databasename].* TO '[username]'@'localhost' IDENTIFIED BY '[password]';
+FLUSH PRIVILEGES;
+EXIT;
+
+
+PHP extensions syntax:
+apt-get update
+apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+systemctl restart apache2
