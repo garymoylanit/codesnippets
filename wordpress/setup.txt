@@ -10,3 +10,23 @@ PHP extensions syntax:
 apt-get update
 apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
 systemctl restart apache2
+
+
+WordPress Installation:
+
+cd /tmp
+curl -O https://wordpress.org/[tar'd version]
+tar xzvf [filename.tar.gz]
+touch /tmp/wordpress/.htaccess
+cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
+mkdir /tmp/wordpress/wp-content/upgrade
+cp -a /tmp/wordpress/. /var/www/[location you want wordpress installed]
+
+chown -R www-data:www-data /var/www/[location you copied WordPress to]
+find /var/www/[location you copied WordPress to] -type d -exec chmod 750 {} \;
+find /var/www/[location you copied WordPress to] -type f -exec chmod 640 {} \;
+curl -s https://api.wordpress.org/secret-key/1.1/salt/
+
+Update wp-config with salt details , db connection details, and add: 
+
+define('FS_METHOD', 'direct');
