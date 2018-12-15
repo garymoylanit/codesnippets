@@ -1,0 +1,9 @@
+Works on UBUNTU 18.04 
+
+
+Edit file: '/usr/share/phpmyadmin/libraries/sql.lib.php'
+Replace: (count($analyzed_sql_results['select_expr'] == 1)
+With: (count($analyzed_sql_results['select_expr'] ) == 1
+
+Restart the server
+sudo service apache2 restart
