@@ -16,6 +16,7 @@ WordPress Installation:
 
 cd /tmp
 curl -O https://wordpress.org/[tar'd version]
+(or) curl -O https://wordpress.org/latest.tar.gz
 tar xzvf [filename.tar.gz]
 touch /tmp/wordpress/.htaccess
 cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
