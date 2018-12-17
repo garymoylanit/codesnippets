@@ -31,3 +31,7 @@ curl -s https://api.wordpress.org/secret-key/1.1/salt/
 Update wp-config with salt details , db connection details, and add: 
 
 define('FS_METHOD', 'direct');
+
+Add SSL
+
+certbot --apache -d example.com -d www.example.com
