@@ -1,0 +1,4 @@
+Allow any file to be uploaded via the backend (e.g. TTF files)
+define('ALLOW_UNFILTERED_UPLOADS', true);
+
+
