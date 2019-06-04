@@ -1,0 +1,1 @@
+show working directory at prompt: PS1="\w $ "
