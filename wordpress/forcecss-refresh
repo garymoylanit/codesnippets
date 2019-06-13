@@ -18,7 +18,10 @@ global $random_number;
 function wpmix_queue_css() {
 	global $theme_version, $random_number;
 	if (!is_admin()) {
-		wp_register_style('custom_styles', get_template_directory_uri() . '/css/customdev.css', false, $theme_version . $random_number);
+		// Fix to work with child theme where style sheet is in child theme directory. 
+		wp_register_style('custom_styles', get_stylesheet_directory_uri() . '/style.css', false, $theme_version . $random_number);
+		
+		//wp_register_style('custom_styles', get_template_directory_uri() . '/css/customdev.css', false, $theme_version . $random_number);
 		wp_enqueue_style('custom_styles');
 	}
 }
