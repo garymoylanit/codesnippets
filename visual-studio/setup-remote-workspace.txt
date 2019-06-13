@@ -1,0 +1,2 @@
+// Copy the remote key to server
+scp %USERPROFILE%/.ssh/ubunto_rsa.pub root@xx.xx.xxx.xxx:~key.pub 
