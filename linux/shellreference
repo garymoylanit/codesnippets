@@ -1,1 +1,6 @@
 show working directory at prompt: PS1="\w $ "
+
+Convert Personal Information Store (PL1 etc) SSL file to .key and .crt files , from shell:
+
+openssl pkcs12 -in path.p12 -out newfile.key.pem -nocerts -nodes -passin 'pass:xxx'
+openssl pkcs12 -in path.p12 -out newfile.crt.pem -clcerts -nokeys -passin 'pass:xxx'
