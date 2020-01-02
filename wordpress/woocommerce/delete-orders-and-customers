@@ -2,3 +2,5 @@ Run the following query in PHPMyAdmin:
 UPDATE `wp_posts` set post_status = 'trash' where post_type = 'shop_order';
 
 Then - Quick Empty Trash Plugin - empty trash. 
+
+Then - https://wordpress.org/plugins/bulk-delete/   - delete the customer users (but not admin)
