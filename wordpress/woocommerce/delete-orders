@@ -1,3 +1,4 @@
+Run the following query in PHPMyAdmin: 
 update wp_posts set post_status = 'trash' where post_type = 'shop_order';
 
 Then - Quick Empty Trash Plugin - empty trash. 
