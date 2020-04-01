@@ -1,0 +1,5 @@
+ssh-keygen -t rsa            // Generate the key
+
+scp -P 7822 id_rsa.pub username@xx.xx.xx.xx.xx:~/.ssh/authorized_keys    // Sebd public key to server we want to log into
+
+ssh username@xx.xx.xx.xxx -p 7822 -i something_rsa   //login to test ; can ommit i switch if using id_rsa
