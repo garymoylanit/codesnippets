@@ -35,3 +35,11 @@ define('FS_METHOD', 'direct');
 Add SSL
 
 certbot --apache -d example.com -d www.example.com
+
+
+------
+Bitnami Specific: 
+
+sudo find /opt/bitnami/apache2/htdocs -type d -exec chmod 0775 {} \;
+sudo find /opt/bitnami/apache2/htdocs -type f -exec chmod 0664 {} \;
+sudo chown -R bitnami:daemon /opt/bitnami/apache2/htdocs
