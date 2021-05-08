@@ -19,6 +19,6 @@
 
 Then simply sign the qemu-system-x86_64 with it:
 
-codesign -s - --entitlements entitlements.xml --force qemu-system-x86_64
+4. codesign -s - --entitlements entitlements.xml --force qemu-system-x86_64
 
-Now simply restart Android Studio and the Android Emulator should work again!
+5. Now simply restart Android Studio and the Android Emulator should work again!
