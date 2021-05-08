@@ -1,0 +1,24 @@
+1.Open Terminal and go to the directory /Users/<username>/Library/Android/sdk/emulator/qemu/darwin-x86_64/
+
+2.Create an xml file named entitlements.xml with touch or cat commands
+
+3.Add this content to the entitlements.xml file:
+----------------------------------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>com.apple.security.hypervisor</key>
+    <true/>
+  </dict>
+</plist>
+
+
+----------------------------------------------------
+
+Then simply sign the qemu-system-x86_64 with it:
+
+codesign -s - --entitlements entitlements.xml --force qemu-system-x86_64
+
+Now simply restart Android Studio and the Android Emulator should work again!
