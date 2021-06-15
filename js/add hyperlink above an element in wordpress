@@ -1,0 +1,13 @@
+
+jQuery(window).load(function(){
+   
+   let parentDiv = document.getElementById('billing_postcode');
+
+    var a = document.createElement('a');
+    var linkText = document.createTextNode("Not sure your Eircode? You can check it here.");
+    a.appendChild(linkText);
+    a.title = "Find Your Eircode";
+    a.href = "https://finder.eircode.ie/";
+    a.target = "_blank";
+    parentDiv.before(a);
+});
