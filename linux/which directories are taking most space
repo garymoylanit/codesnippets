@@ -1,0 +1,9 @@
+du -h <dir> 2>/dev/null | grep '[0-9\.]\+G'
+
+du -h
+Shows the directory and the sizes of each in a human readable format.
+
+2>/dev/null
+Discards output of non directories (such as /proc/)
+
+grep '[0-9\.]\+G'
